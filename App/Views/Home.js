@@ -2,8 +2,6 @@
 
 var React = require('react-native');
 
-var styles = require("./style");
-
 var {
   Text,
   View,
