@@ -1,15 +1,19 @@
 var buttonStyle = {
   margin: '0 auto',
-  width: '200px',
+  width: '60%',
   height: '36px',
   textAlign: 'center',
   backgroundColor: green
 };
 
 var buttonTitleStyle = {
-  lineHeight: '36px',
+  lineHeight: '38px',
   color: 'white',
   fontFamily: 'avenirlight'
+};
+
+var stepsStyle = {
+  paddingBottom: '10px'
 };
 
 var Home = React.createClass({
@@ -17,7 +21,7 @@ var Home = React.createClass({
     return (
       <div>
         <Header />
-        <div>
+        <div style={stepsStyle}>
           <Step description="Prenez en photo votre ordonnance avec votre smartphone."/>
           <Step description="Ajoutez un éventuel commentaire pour votre pharmacien."/>
           <Step description="Renseignez votre profil patient."/>

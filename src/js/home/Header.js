@@ -10,7 +10,7 @@ function buildHeaderStyle(style) {
 
 var welcome = buildHeaderStyle({
   fontSize: '28px',
-  paddingTop: '30px',
+  paddingTop: '10px',
 });
 
 var product = buildHeaderStyle({
