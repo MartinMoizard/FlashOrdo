@@ -22,10 +22,10 @@ var Home = React.createClass({
       <div>
         <Header />
         <div style={stepsStyle}>
-          <Step description="Prenez en photo votre ordonnance avec votre smartphone."/>
-          <Step description="Ajoutez un éventuel commentaire pour votre pharmacien."/>
-          <Step description="Renseignez votre profil patient."/>
-          <Step description="Venez chercher vos médicaments préparés par votre pharmacien !"/>
+          <Step icon="camera" description="Prenez en photo votre ordonnance avec votre smartphone."/>
+          <Step icon="pencil" description="Ajoutez un éventuel commentaire pour votre pharmacien."/>
+          <Step icon="user" description="Renseignez votre profil patient."/>
+          <Step icon="send" description="Venez chercher vos médicaments préparés par votre pharmacien !"/>
         </div>
         <div>
           <div style={buttonStyle}><span style={buttonTitleStyle}>COMMENCER</span></div>

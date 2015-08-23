@@ -7,7 +7,9 @@ var stepContainer = {
 var stepImage = {
   width: '40px',
   height: '40px',
-  flex: '1 0 40'
+  flex: '1 0 40',
+  fontSize: '38px',
+  color: green
 };
 
 var stepText = {
@@ -19,12 +21,16 @@ var stepText = {
 };
 
 var Step = React.createClass({
-  render: function(){
+  render: function() {
     return (
       <div className="flex" style={stepContainer}>
-        <img className="alignSelfCenter" style={stepImage} src="http://lorempixel.com/40/40/"></img>
+        <span className={this._getImageClassName()} style={stepImage} aria-hidden="true"></span>
         <div className="alignSelfCenter" style={stepText}>{this.props.description}</div>
       </div>
     )
+  },
+
+  _getImageClassName: function() {
+    return "glyphicon glyphicon-" + this.props.icon + " alignSelfCenter";
   }
 });
