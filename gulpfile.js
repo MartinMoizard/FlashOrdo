@@ -16,9 +16,15 @@ var path = {
   DEST: 'dist'
 };
 
+var errorFct = function(err) {
+  console.log(err);
+  this.emit('end');
+};
+
 gulp.task('transform', function(){
   gulp.src(path.JS)
     .pipe(react())
+    .on('error', errorFct)
     .pipe(gulp.dest(path.DEST_SRC));
 });
 
