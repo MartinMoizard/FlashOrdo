@@ -1,11 +1,25 @@
 {
-  "name": "FlashOrdo",
+  "name": "flash-ordi",
   "version": "0.0.1",
-  "private": true,
+  "description": "Flash Ordo web app.",
+  "keywords": [
+    "react",
+    "flash",
+    "pharmacy"
+  ],
+  "main": "src/index.html",
   "scripts": {
-    "start": "node_modules/react-native/packager/packager.sh"
+    "start": "gulp"
   },
-  "dependencies": {
-    "react-native": "^0.9.0"
-  }
+  "author": "@MartinMoizard <martin.moizard@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.8.2",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-html-replace": "^1.5.1",
+    "gulp-react": "^3.0.1",
+    "gulp-uglify": "^1.2.0"
+  },
+  "dependencies": {}
 }
