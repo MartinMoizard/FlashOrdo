@@ -1,6 +1,3 @@
-var green = '#008C6F';
-var orange = '#F97528';
-
 function buildHeaderStyle(style) {
   var headerStyle = {
     textAlign: 'center',
@@ -28,6 +25,8 @@ var description = buildHeaderStyle({
 var stepsIntro = buildHeaderStyle({
   fontFamily: 'trashhand',
   fontSize: '18px',
+  paddingTop: '10px',
+  paddingBottom: '5px'
 });
 
 var steps = {

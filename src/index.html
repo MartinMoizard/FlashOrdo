@@ -18,6 +18,20 @@
         font-style: normal;
       }
     </style>
+    <style>
+      .flex {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+      }
+
+      .alignSelfCenter {
+        -webkit-align-self: center;
+        align-self: center;
+      }
+    </style>
   </head>
   <body>
     <div class="container-fluid">
@@ -26,6 +40,7 @@
     <script src="https://fb.me/react-0.13.3.min.js"></script>
     <script src="bower_components/lodash/lodash.min.js"></script>
 
+    <script src="src/Util.js"></script>
     <script src="src/home/Header.js"></script>
     <script src="src/home/Step.js"></script>
     <script src="src/home/Home.js"></script>
