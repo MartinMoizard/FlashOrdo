@@ -9,7 +9,7 @@ var bower = require('gulp-bower');
 var path = {
   HTML: 'src/index.html',
   ALL: ['src/js/*.js', 'src/js/**/*.js', 'src/index.html'],
-  JS: ['src/js/**/*.js', 'src/js/*.js'],
+  JS: ['src/js/Util.js', 'src/js/*/*.js', 'src/js/App.js'],
   FONT: ['src/font/*.ttf', 'src/font/*.otf'],
   MINIFIED_OUT: 'build.min.js',
   DEST_SRC: 'dist/src',
