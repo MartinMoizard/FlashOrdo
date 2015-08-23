@@ -9,7 +9,7 @@ var bower = require('gulp-bower');
 var path = {
   HTML: 'src/index.html',
   ALL: ['src/js/*.js', 'src/js/**/*.js', 'src/index.html'],
-  JS: ['src/js/*.js', 'src/js/**/*.js'],
+  JS: ['src/js/**/*.js', 'src/js/*.js'],
   FONT: ['src/font/*.ttf', 'src/font/*.otf'],
   MINIFIED_OUT: 'build.min.js',
   DEST_SRC: 'dist/src',
@@ -77,4 +77,4 @@ gulp.task('serve:dev', ['transform', 'bower', 'font', 'copy'], function() {
 
 gulp.task('default', ['watch']);
 
-gulp.task('production', ['replaceHTML', 'build']);
+gulp.task('production', ['replaceHTML', 'font', 'bower', 'build']);
