@@ -1,15 +1,33 @@
 <html>
   <head>
+    <title>Flash Ordo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <style type="text/css" media="screen, print">
+      @font-face {
+        font-family: 'trashhand';
+        src: url('TrashHand.ttf');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: 'avenirlight';
+        src: url('AvenirLTStd-Light.otf');
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
   </head>
   <body>
-    <div id="app"></div>
+    <div class="container-fluid">
+      <div id="app"></div>
+    </div>
     <script src="https://fb.me/react-0.13.3.min.js"></script>
 
-    <script src="src/Home.js"></script>
+    <script src="src/home/Header.js"></script>
+    <script src="src/home/Step.js"></script>
+    <script src="src/home/Home.js"></script>
     <script src="src/App.js"></script>
-
-    <script type='text/javascript' id="__bs_script__">//<![CDATA[
-    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.2.8.2.js'><\/script>".replace("HOST", location.hostname));
-//]]></script>
   </body>
 </html>

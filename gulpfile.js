@@ -9,6 +9,7 @@ var path = {
   HTML: 'src/index.html',
   ALL: ['src/js/*.js', 'src/js/**/*.js', 'src/index.html'],
   JS: ['src/js/*.js', 'src/js/**/*.js'],
+  FONT: ['src/font/*.ttf', 'src/font/*.otf'],
   MINIFIED_OUT: 'build.min.js',
   DEST_SRC: 'dist/src',
   DEST_BUILD: 'dist/build',
@@ -26,8 +27,13 @@ gulp.task('copy', function(){
     .pipe(gulp.dest(path.DEST));
 });
 
+gulp.task('font', function () {
+  gulp.src(path.FONT)
+    .pipe(gulp.dest(path.DEST));
+});
+
 gulp.task('watch', function(){
-  gulp.watch(path.ALL, ['transform', 'copy']);
+  gulp.watch(path.ALL, ['transform', 'font', 'copy']);
 });
 
 gulp.task('build', function(){
@@ -46,14 +52,14 @@ gulp.task('replaceHTML', function() {
     .pipe(gulp.dest(path.DEST));
 });
 
-gulp.task('serve:dev', ['transform', 'copy'], function() {
+gulp.task('serve:dev', ['transform', 'font', 'copy'], function() {
     browserSync.init({
       server: {
         baseDir: "./dist"
       }
     });
 
-    gulp.watch(path.ALL, ['transform', 'copy']);
+    gulp.watch(path.ALL, ['transform', 'font', 'copy']);
     gulp.watch(path.ALL).on('change', browserSync.reload);
 });
 
