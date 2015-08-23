@@ -4,6 +4,7 @@ var uglify = require('gulp-uglify');
 var react = require('gulp-react');
 var htmlreplace = require('gulp-html-replace');
 var browserSync = require('browser-sync').create();
+var bower = require('gulp-bower');
 
 var path = {
   HTML: 'src/index.html',
@@ -38,8 +39,13 @@ gulp.task('font', function () {
     .pipe(gulp.dest(path.DEST));
 });
 
+gulp.task('bower', function() {
+  return bower()
+    .pipe(gulp.dest(path.DEST + '/bower_components'));
+});
+
 gulp.task('watch', function(){
-  gulp.watch(path.ALL, ['transform', 'font', 'copy']);
+  gulp.watch(path.ALL, ['transform', 'bower', 'font', 'copy']);
 });
 
 gulp.task('build', function(){
@@ -58,10 +64,10 @@ gulp.task('replaceHTML', function() {
     .pipe(gulp.dest(path.DEST));
 });
 
-gulp.task('serve:dev', ['transform', 'font', 'copy'], function() {
+gulp.task('serve:dev', ['transform', 'bower', 'font', 'copy'], function() {
     browserSync.init({
       server: {
-        baseDir: "./dist"
+        baseDir: path.DEST
       }
     });
 

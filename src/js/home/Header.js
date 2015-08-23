@@ -1,33 +1,34 @@
 var green = '#008C6F';
 var orange = '#F97528';
 
-var welcome = {
-  textAlign: 'center',
-  fontFamily: 'avenirlight',
+function buildHeaderStyle(style) {
+  var headerStyle = {
+    textAlign: 'center',
+    fontFamily: 'avenirlight',
+    color: green
+  };
+
+  return _.defaults(style, headerStyle);
+}
+
+var welcome = buildHeaderStyle({
   fontSize: '28px',
   paddingTop: '30px',
-  color: green
-};
+});
 
-var product = {
-  textAlign: 'center',
+var product = buildHeaderStyle({
   fontFamily: 'trashhand',
   fontSize: '60px',
   color: orange
-};
+});
 
-var description = {
-  textAlign: 'center',
-  fontFamily: 'avenirlight',
-  color: green
-};
+var description = buildHeaderStyle({
+});
 
-var stepsIntro = {
-  textAlign: 'center',
+var stepsIntro = buildHeaderStyle({
   fontFamily: 'trashhand',
   fontSize: '18px',
-  color: green
-};
+});
 
 var steps = {
   color: orange
