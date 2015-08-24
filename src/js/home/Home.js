@@ -3,7 +3,8 @@ var buttonStyle = {
   width: '60%',
   height: '36px',
   textAlign: 'center',
-  backgroundColor: green
+  backgroundColor: green,
+  cursor: 'pointer'
 };
 
 var buttonTitleStyle = {
@@ -27,10 +28,14 @@ var Home = React.createClass({
           <Step icon="user" description="Renseignez votre profil patient."/>
           <Step icon="send" description="Venez chercher vos médicaments préparés par votre pharmacien !"/>
         </div>
-        <div>
-          <div style={buttonStyle}><span style={buttonTitleStyle}>COMMENCER</span></div>
+        <div className="noselect">
+          <div onClick={this._onStart} style={buttonStyle}><span style={buttonTitleStyle}>COMMENCER</span></div>
         </div>
       </div>
     )
+  },
+
+  _onStart: function() {
+    console.log('start');
   }
 });
