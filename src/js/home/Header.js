@@ -33,10 +33,21 @@ var steps = {
   color: orange
 };
 
+var logoStyle = {
+  position: 'absolute',
+  top: '5px',
+  right: '5px',
+  width: '80px',
+  height: '80px'
+};
+
 var Header = React.createClass({
   render: function(){
     return (
       <div>
+        <div style={logoStyle}>
+          <img width="80" src="img/logo_pharma.png"></img>
+        </div>
         <div style={welcome}>Bienvenue sur</div>
         <div style={product}>FLASH ORDO</div>
         <div style={description}>
