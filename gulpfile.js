@@ -83,4 +83,4 @@ gulp.task('serve:dev', ['transform', 'bower', 'font', 'images', 'copy'], functio
 
 gulp.task('default', ['watch']);
 
-gulp.task('production', ['replaceHTML', 'font', 'bower', 'build']);
+gulp.task('production', ['replaceHTML', 'images', 'font', 'bower', 'build']);
